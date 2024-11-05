@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>全屏图片展示</title>
     <style>
-        /* 设置全屏显示 */
         body, html {
             margin: 0;
             padding: 0;
@@ -25,23 +24,6 @@
     </style>
 </head>
 <body>
-    <div id="image-container"></div>
-
-    <script>
-        // 定义图片链接
-        const imageSrc = "https://github.com/CeuleanSea/shiyan.github.io/huoxing.jpg";
-
-        // 页面加载时显示图片
-        function displayImage() {
-            const img = document.createElement("img");
-            img.src = imageSrc;
-            const container = document.getElementById("image-container");
-            container.innerHTML = ""; // 清除上次显示的内容
-            container.appendChild(img);
-        }
-
-        // 页面加载时自动显示图片
-        window.onload = displayImage;
-    </script>
+    <img src="https://raw.githubusercontent.com/CeuleanSea/shiyan.github.io/main/huoxing.jpg" alt="火星图片">
 </body>
 </html>
