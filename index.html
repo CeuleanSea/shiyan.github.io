@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全屏随机图片展示</title>
+    <title>全屏图片展示</title>
     <style>
-        /* 全屏图片设置 */
+        /* 设置全屏显示 */
         body, html {
             margin: 0;
             padding: 0;
@@ -28,23 +28,20 @@
     <div id="image-container"></div>
 
     <script>
-        // 图片链接数组
-        const images = [
-            "https://shiyan.github.io/shiyan.png",
-        ];
+        // 定义图片链接
+        const imageSrc = "https://shiyan.github.io/shiyan.png";
 
-        // 随机抽取并显示图片
-        function displayRandomImage() {
-            const randomIndex = Math.floor(Math.random() * images.length);
+        // 页面加载时显示图片
+        function displayImage() {
             const img = document.createElement("img");
-            img.src = images[randomIndex];
+            img.src = imageSrc;
             const container = document.getElementById("image-container");
-            container.innerHTML = ""; // 清除上次显示的图片
+            container.innerHTML = ""; // 清除上次显示的内容
             container.appendChild(img);
         }
 
         // 页面加载时自动显示图片
-        window.onload = displayRandomImage;
+        window.onload = displayImage;
     </script>
 </body>
 </html>
